@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3307/labexam</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root</property>
+
+        <!-- Hibernate dialect for MySQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Display SQL queries in console -->
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- Automatically update the schema -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Annotated class mapping -->
+        <mapping class="com.klef.jfsd.exam.hibernate_lab.Client" />
+    </session-factory>
+</hibernate-configuration>
